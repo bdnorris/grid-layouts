@@ -73,14 +73,22 @@ html {
     visibility: visible; } }
 
 body {
+  background-color: #fffcf0;
   font-size: 16px;
   font-family: "et-book", "Adobe Garamond", Garamond, serif;
-  color: #343741;
+  color: #2f2e2b;
   margin: 0;
   padding: 0; }
 
+h3 {
+  text-transform: uppercase;
+  text-align: right; }
+
 p {
-  color: #343741; }
+  color: #2f2e2b;
+  font-size: 1em;
+  line-height: 1.333;
+  font-weight: 400; }
 
 a {
   color: #b7006a;
@@ -116,3 +124,11 @@ button, a.button {
   max-width: 280px; }
   button:hover, a.button:hover {
     background-color: #980058; }
+
+.site-container {
+  padding: 10vw; }
+  @media screen and (min-width: 40em) {
+    .site-container {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      grid-gap: 2em; } }

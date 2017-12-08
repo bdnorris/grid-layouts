@@ -1,1 +1,15 @@
 // Could be used for layout styles
+
+.site-container {
+  padding: 10vw;
+
+  @include breakpoint(medium) {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 2em;
+  }
+  @include breakpoint(large) {
+    // grid-template-columns: 1fr 1fr 1fr;
+  }
+
+}
