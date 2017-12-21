@@ -1,6 +1,6 @@
 body {
   background-color: $bg;
-  font-size: 16px;
+  font-size: 20px;
   font-family: $serif;
   color: $text;
   margin: 0;
@@ -8,15 +8,18 @@ body {
 }
 
 $ratio: 1.2;
-$hbase: 6;
+$hbase: 5;
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.15;
+  font-weight: normal;
 }
 
 h1 {
  font-size: #{$hbase}em;
  margin: 0 0 #{$ratio/2}em 0;
+ font-weight: bold;
+ font-family: $display;
 }
 
 h2 {
@@ -25,8 +28,7 @@ h2 {
 }
 
 h3 {
-  text-transform: uppercase;
-  text-align: right;
+
   font-size: #{($hbase/$ratio/2)}em;
   margin: 0 0 #{$ratio/2}em 0;
 }
@@ -34,11 +36,23 @@ h3 {
 h4 {
   font-size: #{($hbase/$ratio/3)}em;
   margin: 0 0 #{$ratio/2}em 0;
+  &  .chapter {
+    text-align: center;
+  }
 }
 
 h5 {
   font-size: #{($hbase/$ratio/4)}em;
   margin: 0 0 #{$ratio/2}em 0;
+  &.section-title {
+    text-transform: uppercase;
+    margin-top: 0.1em;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    @include breakpoint(large) {
+      text-align: right;
+    }
+  }
 }
 
 h6 {
@@ -51,6 +65,8 @@ p {
   font-size: 1em;
   line-height: 1.5;
   font-weight: 400;
+  margin: 0 0 #{$ratio}em 0;
+  max-width: 32em;
 }
 
 

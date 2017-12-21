@@ -3,13 +3,13 @@
 .site-container {
   padding: 10vw;
 
-  @include breakpoint(medium) {
+  @include breakpoint(large) {
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-gap: 2em;
-  }
-  @include breakpoint(large) {
-    // grid-template-columns: 1fr 1fr 1fr;
+    // padding-right: 33vw;
+    // grid-template-rows: repeat(4, auto)
+
   }
 
 }
