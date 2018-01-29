@@ -1,14 +1,10 @@
 @import "./scss/normalize/index";
 @import "./scss/util/index";
-// @import "zen-garden-base";
 @import "config";
 @import "fonts";
 @import "animations";
 @import "mixins";
 @import "colors";
-@import "type";
-@import "buttons";
-@import "header";
-@import "navigation";
-@import "layout";
-@import "footer";
+@import "01-basic/type";
+@import "01-basic/buttons";
+@import "01-basic/layout";

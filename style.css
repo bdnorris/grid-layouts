@@ -170,10 +170,10 @@ button, a.button {
   button:hover, a.button:hover {
     background-color: #980058; }
 
-.site-container {
+.site-container.mccarthy {
   padding: 10vw; }
   @media screen and (min-width: 64em) {
-    .site-container {
+    .site-container.mccarthy {
       display: grid;
       grid-template-columns: 1fr 2fr;
       grid-gap: 2em; } }
