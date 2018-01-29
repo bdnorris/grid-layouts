@@ -41,3 +41,38 @@
   font-weight: 600;
   font-style: normal
 }
+
+@font-face {
+  font-family: "Source Code";
+  src: url("fonts-variable/SourceCodeVariable-Italic.otf") format("otf");
+  font-weight: 400;
+  font-style: italic
+}
+
+@font-face {
+  font-family: "Source Code";
+  src: url("fonts-variable/SourceCodeVariable-Roman.otf") format("otf");
+  font-weight: 400;
+  font-style: normal
+}
+
+@font-face {
+  font-family: "Source Sans";
+  src: url("fonts-variable/SourceSansVariable-Italic.otf") format("otf"), url("fonts-variable/SourceSansVariable-Italic.ttf") format("ttf");
+  font-weight: 400;
+  font-style: italic
+}
+
+@font-face {
+  font-family: "Source Sans";
+  src: url("fonts-variable/SourceSansVariable-Roman.otf") format("otf"), url("fonts-variable/SourceSansVariable-Roman.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal
+}
+
+@font-face {
+  font-family: "Source Sans";
+  src: url("fonts-variable/SourceSerifVariable-Roman.otf") format("otf"), url("fonts-variable/SourceSerifVariable-Roman.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal
+}
