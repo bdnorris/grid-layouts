@@ -1,0 +1,15 @@
+// Could be used for layout styles
+
+.site-container.pattern-gallery {
+  padding: 10vw;
+
+  @include breakpoint(large) {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 2em;
+    // padding-right: 33vw;
+    // grid-template-rows: repeat(4, auto)
+
+  }
+
+}
