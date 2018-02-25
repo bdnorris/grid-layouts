@@ -2,14 +2,77 @@
 
 .site-container.pattern-gallery {
   padding: 10vw;
+  section.grid {
+    // @include breakpoint(large) {
+      display: grid;
+      grid-template-columns: repeat(10, 1fr);
+      grid-template-rows: repeat(10, 1fr);
+      grid-gap: 2em;
+      grid-auto-flow: dense;
+      // padding-right: 33vw;
+      // grid-template-rows: repeat(4, auto)
+      .grid-item {
+        // border: 1px solid tomato;
 
-  @include breakpoint(large) {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-gap: 2em;
-    // padding-right: 33vw;
-    // grid-template-rows: repeat(4, auto)
+        // &:nth-child(4) {
+        //   grid-column: 3 / 6;
+        //   grid-row: 2 / 4;
+        // }
+      } // div
+    // } // large
 
+    .h1 {
+      grid-row: span 1;
+    }
+    .h2 {
+      grid-row: span 2;
+    }
+    .h3 {
+      grid-row: span 3;
+    }
+    .h4 {
+      grid-row: span 4;
+    }
+    .h5 {
+      grid-row: span 5;
+    }
+    .h6 {
+      grid-row: span 6;
+    }
+    .v1 {
+      grid-column: span 1;
+    }
+    .v2 {
+      grid-column: span 2;
+    }
+    .v3 {
+      grid-column: span 3;
+    }
+    .v4 {
+      grid-column: span 4;
+    }
+    .v5 {
+      grid-column: span 5;
+    }
+    .v6 {
+      grid-column: span 6;
+    }
   }
 
-}
+  .dark {
+    background-color: #4B4440;
+  }
+  .orange1 {
+    background-color: #F17536;
+  }
+  .yellow {
+    background-color: #FBE5AB;
+  }
+  .orange2 {
+    background-color: #EA9450;
+  }
+  .brown {
+    background-color: #A36F4E;
+  }
+
+} // pattern-gallery
