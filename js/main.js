@@ -13,13 +13,18 @@ var GRID = {
     return `<div class="grid-item h${h} v${v} ${c}">&nbsp;</div>`
   },
 
+  refresh: function() {
+    const refresh = document.getElementById('refresh');
+    refresh.addEventListener('click', () => GRID.gridPattern());
+  },
+
   gridPattern: function() {
 
     // var item = new DocumentFragment()
     const gridContainer = document.getElementById('grid');
 
     const smallItems = 30,
-    randomItems = 60;
+          randomItems = 60;
 
     grid = document.getElementById('grid');
 
@@ -44,6 +49,8 @@ var GRID = {
     const html = digits.map(GRID.generateGridItem).join('');
 
     gridContainer.innerHTML = html;
+
+
 
   },
 

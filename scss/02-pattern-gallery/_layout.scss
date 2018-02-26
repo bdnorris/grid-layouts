@@ -2,6 +2,11 @@
 
 .site-container.pattern-gallery {
   padding: 10vw;
+  button.refresh {
+    background-color: #4B4440;
+    margin: 0 auto 2em auto;
+
+  }
   section.grid {
     // @include breakpoint(large) {
       display: grid;

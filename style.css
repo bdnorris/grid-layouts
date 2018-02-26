@@ -109,7 +109,7 @@ html {
     opacity: 1;
     visibility: visible; } }
 
-.button-reset {
+.button-reset, button {
   background: none;
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -125,17 +125,20 @@ button, a.button {
   box-sizing: border-box;
   border: none;
   display: block;
-  background-color: #b7006a;
+  background-color: tomato;
   color: white;
   text-align: center;
   border-radius: 0;
+  padding: 1em 1.666em 1.1em 1.666em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
   cursor: pointer;
   -webkit-transition: background-color 0.5s ease;
   transition: background-color 0.5s ease;
   line-height: 1.2em;
   max-width: 280px; }
   button:hover, a.button:hover {
-    background-color: #980058; }
+    background-color: #ff4928; }
 
 .site-container.mccarthy {
   padding: 10vw; }
@@ -210,6 +213,9 @@ a {
 
 .site-container.pattern-gallery {
   padding: 10vw; }
+  .site-container.pattern-gallery button.refresh {
+    background-color: #4B4440;
+    margin: 0 auto 2em auto; }
   .site-container.pattern-gallery section.grid {
     display: grid;
     grid-template-columns: repeat(10, 1fr);

@@ -11,19 +11,25 @@
 }
 
 // Basic button styles
+button {
+  @extend .button-reset;
+}
 button, a.button {
   box-sizing: border-box;
   border: none;
   display: block;
-  background-color: $clickable;
+  background-color: tomato;
   color: white;
   text-align: center;
   border-radius: 0;
+  padding: 1em 1.666em 1.1em 1.666em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
   cursor: pointer;
   transition: background-color $hover-timing ease;
   line-height: 1.2em;
   max-width: 280px;
   &:hover {
-    background-color: darken($clickable, 6%);
+    background-color: darken(tomato, 6%);
   }
 }
