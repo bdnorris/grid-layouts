@@ -109,6 +109,9 @@ html {
     opacity: 1;
     visibility: visible; } }
 
+.site-container.index {
+  padding: 10vw; }
+
 .button-reset, button {
   background: none;
   -webkit-box-shadow: none;
