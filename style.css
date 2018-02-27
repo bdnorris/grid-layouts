@@ -215,15 +215,16 @@ a {
     color: #980058; }
 
 .site-container.pattern-gallery {
+  background-color: black;
   padding: 10vw; }
   .site-container.pattern-gallery button.refresh {
     background-color: #4B4440;
     margin: 0 auto 2em auto; }
   .site-container.pattern-gallery section.grid {
     display: grid;
-    grid-template-columns: repeat(10, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(2em, 1fr));
     grid-template-rows: repeat(10, 1fr);
-    grid-gap: 2em;
+    grid-gap: 1em;
     grid-auto-flow: dense; }
     .site-container.pattern-gallery section.grid .h1 {
       grid-row: span 1; }

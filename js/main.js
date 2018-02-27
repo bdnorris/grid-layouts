@@ -9,8 +9,8 @@ $(document).ready(function(){
 });
 
 var GRID = {
-  generateGridItem: function([h, v, c]) {
-    return `<div class="grid-item h${h} v${v} ${c}">&nbsp;</div>`
+  generateGridItem: function([h, v, c, bg]) {
+    return `<div class="grid-item h${h} v${v} ${c}" style="background-image:url('img/${bg}')">&nbsp;</div>`
   },
 
   refresh: function() {
@@ -28,18 +28,15 @@ var GRID = {
 
     grid = document.getElementById('grid');
 
-    const colors = ['dark', 'orange1', 'yellow', 'orange2', 'brown']
+    const colors = ['dark', 'orange1', 'yellow', 'orange2', 'brown'];
+    const patterns = ['angles.png', 'crosshatch.png', 'dots_lines.png', 'dots_lines1.png', 'floral.png', 'floral4.png', 'geometric2.png', 'lines.png', 'pebbles.png', 'pebbles2.png', 'pebbles3.png', 'squiggle.png', 'triangle.png', 'triangles_dots.png', 'woodland.png'];
 
-    function getRandomInt(min, max) {
-      min = Math.ceil(min);
-      max = Math.floor(max);
-      return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
-    }
 
-    var digits = Array.from({ length: randomItems }, () => [getRandomInt(1, 6), getRandomInt(1, 6), colors[getRandomInt(0, 5)]]);
+
+    var digits = Array.from({ length: randomItems }, () => [getRandomInt(1, 6), getRandomInt(1, 6), colors[getRandomInt(0, 5)], patterns[getRandomInt(0, patterns.length )]]);
 
     for (let i = 1 ; i <= smallItems ; i++) {
-      digits.push([1, 1, colors[getRandomInt(0, 5)]]);
+      digits.push([1, 1, colors[getRandomInt(0, 5)], patterns[getRandomInt(0, patterns.length )]]);
     }
 
     digits = shuffle(digits);
@@ -54,6 +51,12 @@ var GRID = {
 
   },
 
+}
+
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
 }
 
 
