@@ -1,0 +1,38 @@
+$kor: "korolev", sans-serif;
+$kor-comp: "korolev-compressed", sans-serif;
+$kor-cond: "korolev-condensed", sans-serif;
+
+body {
+  font-family: $kor;
+}
+
+.type-black {
+  color: rgba(0, 10, 20, 0.9);
+}
+
+.type-red {
+  color: rgba(255, 20, 20, 0.9);
+}
+
+.title {
+  height: 18vw;
+  width: 30vw;
+  position: relative;
+  .ds {
+    font-weight: 700;
+    font-size: 6vw;
+    position: absolute;
+    
+  }
+  
+  .nb {
+    font-family: $kor-comp;
+    font-weight: 900;
+    font-size: 18vw;
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    transform: translateX(50%);
+  }
+}
+

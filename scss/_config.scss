@@ -16,6 +16,11 @@ $sans: 'Open Sans', Helvetica, Roboto, Arial, sans-serif;
 $serif: 'et-book', 'Adobe Garamond', Garamond, serif;
 $display: 'et-book-display', 'Adobe Garamond', Garamond, serif;
 
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 .clearfix {
   //clearfix
   &:before,

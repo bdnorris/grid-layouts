@@ -10,6 +10,10 @@ html {
   box-sizing: inherit; }
 
 /* END BOX MODEL SETTINGS */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
 .clearfix {
   zoom: 1;
   /* For IE 6/7 (trigger hasLayout) */ }
@@ -260,3 +264,52 @@ a {
     background-color: #EA9450; }
   .site-container.pattern-gallery .brown {
     background-color: #A36F4E; }
+
+.site-container.poster {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh; }
+  .site-container.poster .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr; }
+    .site-container.poster .grid .grid-item {
+      border: 1px solid red;
+      position: relative; }
+      .site-container.poster .grid .grid-item:last-child {
+        grid-column-start: 3;
+        grid-row-start: 2;
+        grid-column-end: 4;
+        grid-row-end: 4; }
+
+body {
+  font-family: "korolev", sans-serif; }
+
+.type-black {
+  color: rgba(0, 10, 20, 0.9); }
+
+.type-red {
+  color: rgba(255, 20, 20, 0.9); }
+
+.title {
+  height: 18vw;
+  width: 30vw;
+  position: relative; }
+  .title .ds {
+    font-weight: 700;
+    font-size: 6vw;
+    position: absolute; }
+  .title .nb {
+    font-family: "korolev-compressed", sans-serif;
+    font-weight: 900;
+    font-size: 18vw;
+    -webkit-transform: translateX(50%);
+    transform: translateX(50%); }
