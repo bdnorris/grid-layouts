@@ -9,8 +9,9 @@ $(document).ready(function(){
 });
 
 var GRID = {
-  generateGridItem: function([h, v, c, bg]) {
-    return `<div class="grid-item h${h} v${v} ${c}" style="background-image:url('img/${bg}')">&nbsp;</div>`
+  generateGridItem: function([h, v, c, bg, s]) {
+    // return `<div class="grid-item h${h} v${v} ${c}" style="background-image:url('img/${bg}')">&nbsp;</div>`
+    return `<div class="grid-item h${h} v${v} ${c}">&nbsp;</div>`
   },
 
   refresh: function() {
@@ -30,13 +31,14 @@ var GRID = {
 
     const colors = ['dark', 'orange1', 'yellow', 'orange2', 'brown'];
     const patterns = ['angles.png', 'crosshatch.png', 'dots_lines.png', 'dots_lines1.png', 'floral.png', 'floral4.png', 'geometric2.png', 'lines.png', 'pebbles.png', 'pebbles2.png', 'pebbles3.png', 'squiggle.png', 'triangle.png', 'triangles_dots.png', 'woodland.png'];
+    const shapes = ['triangle', 'circle', 'parallelogram', 'rhombus', 'chevron-r', 'chevron-l'];
 
+    console.log(shapes.length);
 
-
-    var digits = Array.from({ length: randomItems }, () => [getRandomInt(1, 6), getRandomInt(1, 6), colors[getRandomInt(0, 5)], patterns[getRandomInt(0, patterns.length )]]);
+    var digits = Array.from({ length: randomItems }, () => [getRandomInt(1, 6), getRandomInt(1, 6), colors[getRandomInt(0, colors.length - 1)], patterns[getRandomInt(0, patterns.length )], shapes[getRandomInt(0, shapes.length - 1)]]);
 
     for (let i = 1 ; i <= smallItems ; i++) {
-      digits.push([1, 1, colors[getRandomInt(0, 5)], patterns[getRandomInt(0, patterns.length )]]);
+      digits.push([1, 1, colors[getRandomInt(0, colors.length - 1)], patterns[getRandomInt(0, patterns.length )], shapes[getRandomInt(0, shapes.length - 1)]]);
     }
 
     digits = shuffle(digits);
