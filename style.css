@@ -317,26 +317,53 @@ a {
         grid-column-end: 4;
         grid-row-end: 4; }
 
-body {
+body.posters {
   font-family: "korolev", sans-serif; }
 
 .type-black {
   color: rgba(0, 10, 20, 0.9); }
 
-.type-red {
+.type-red, .sub-title .capital {
   color: rgba(255, 20, 20, 0.9); }
 
 .title {
   height: 18vw;
   width: 30vw;
   position: relative; }
+  .title .ds, .title .nb {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0; }
   .title .ds {
     font-weight: 700;
-    font-size: 6vw;
-    position: absolute; }
+    font-size: 6vw; }
   .title .nb {
     font-family: "korolev-compressed", sans-serif;
     font-weight: 900;
     font-size: 18vw;
-    -webkit-transform: translateX(50%);
-    transform: translateX(50%); }
+    z-index: 2; }
+
+.infin {
+  font-size: 22vw;
+  font-family: "korolev-compressed", sans-serif;
+  margin: -3.5rem 0; }
+
+.sub-title {
+  font-size: 2em;
+  font-family: "korolev-condensed", sans-serif; }
+  .sub-title .capital {
+    font-family: "korolev-compressed", sans-serif;
+    color: rgba(255, 20, 20, 0.9); }
